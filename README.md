@@ -1,14 +1,32 @@
-# Aruba Central - SAML SSO
+# Aruba Central: SAML SSO using Azure AD 
 
-## Azure AD Integration Guide
 
-### Before you Begin
+This documentation describes the steps required for configuring service provider metadata using Azure AD.
+
+<!-- prettier-ignore-start -->
+## Contents
+
+- [Azure AD Integration Guide](#azure-ad-integration-guide)
+- [Before you Begin](#before-you-begin)
+- [Steps to Configure SSO/SAML Application in Azure AD](#steps-to-configure-sso-saml-application-in-azure-ad)
+- [Step 1: Create an Azure AD Enterprise Application](#step-1--create-an-azure-ad-enterprise-application)
+- [Step 1A: Add Aruba Central Custom Attributes](#step-1a--add-aruba-central-custom-attributes)
+  - [Edit User Attributes](#edit-user-attributes)
+  - [Claim values](#claim-values)
+- [Step 2: Create Aruba Central SSO for Azure AD](#step-2--create-aruba-central-sso-for-azure-ad)
+- [Login to Central using Azure AD](#login-to-central-using-azure-ad)
+- [Validation](#validation)
+- [Using Azure AD MFA](#using-azure-ad-mfa)
+- [Troubleshooting](#troubleshooting)
+<!-- prettier-ignore-end -->
+
+## Before you Begin
 
 Go through the [SAML SSO feature description](https://help.central.arubanetworks.com/2.5.3/documentation/online_help/content/nms/user-mgmt/saml-profile-conf.htm?Highlight=SSO) to understand how [SAML](https://help.central.arubanetworks.com/2.5.3/documentation/online_help/content/nms/user-mgmt/saml-profile-conf.htm?Highlight=SSO) framework works in the context of Aruba Central.
 
 In Azure AD, create a Group (Ex: Aruba Central Admins) and add the users that should have access to Aruba Central to this new group. This group will be used to grant access to Aruba Central using the users Azure AD credentials.
 
-### Steps to Configure SSO/SAML Application in Azure AD
+## Steps to Configure SSO/SAML Application in Azure AD
 To configure SSO in Aruba Central, first download the metadata file from Azure AD.
 
 
@@ -20,7 +38,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 </ol>
 
 
-### Step 1: Create an Azure AD Enterprise Application
+## Step 1: Create an Azure AD Enterprise Application
 
 * Log into to Azure portal.
 
@@ -43,7 +61,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 ![Image](images/azure-download-metadata.png)
 
 
-### Step 1A: Add Aruba Central Custom Attributes
+## Step 1A: Add Aruba Central Custom Attributes
 ***Attributes Statement***
 
 *For the purpose of this guide, the values are static. The customer will most likely changes these to dynamic values, as this will 
@@ -77,7 +95,7 @@ Please refer to the Aruba Central documentation for additional information on SS
 ![Image](images/azure-user-attributes-claim-cid.png)
 
 
-### Step 2: Create Aruba Central SSO for Azure AD
+## Step 2: Create Aruba Central SSO for Azure AD
 
 * Log into Aruba Central
 * From the **Account Home**, select **Single-Sign-On**
@@ -103,7 +121,7 @@ Please refer to the Aruba Central documentation for additional information on SS
 
 
 
-### Login to Central using Azure AD
+## Login to Central using Azure AD
 * Once you've completed the above steps, login to central using your Azure AD email.
 
 
@@ -112,17 +130,17 @@ Please refer to the Aruba Central documentation for additional information on SS
 * If everything is working correctly, you should have logged into Aruba Central and are viewing the Overview page.
 
 
-### Validation
+## Validation
 * Go to Account Home -> User Roles in Central.
 You should see your user has logged and their user type is ***Federated***
 
 ![Image](images/central-user-is-federated.png)
 
-### Using Azure AD MFA
+## Using Azure AD MFA
 * By default, Azure AD enables MFA. However, for testing and demos, it's much easier to disable MFA on your accounts. To disable MFA, please see the following documentation: [What are security defaults](https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/concept-fundamentals-security-defaults)
 
 
-### Troubleshooting
+## Troubleshooting
 * There's a useful 3rd party browser tool called: SAML Tracer
 * This tool will allow you to verify the attributes you're sending to Central.
 * It can be useful when configuratin SAML with multiple Central accounts or domains
