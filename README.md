@@ -64,12 +64,12 @@ aruba_1_cid = <customer-id>
 Please refer to the Aruba Central documentation for additional information on SSO attributes: [Configuring Service Provider Metadata in IdP](https://help.central.arubanetworks.com/2.5.3/documentation/online_help/content/nms/user-mgmt/conf-idp-attributes.htm)
 
 
-####Edit User Attributes
+#### Edit User Attributes
 * The user attributes are required attributes required by Central to identify the customer, user and application.
 
 ![Image](images/azure-user-attributes.png)
 
-####Claim values
+#### Claim values
 
 * The groups is set to whatever AD Group you created for Aruba Central
 
