@@ -18,6 +18,7 @@ This documentation describes the steps required for configuring service provider
 - [Validation](#validation)
 - [Using Azure AD MFA](#using-azure-ad-mfa)
 - [Troubleshooting](#troubleshooting)
+- [Contributing](#contributing)
 <!-- prettier-ignore-end -->
 
 ## Before you Begin
@@ -148,6 +149,12 @@ You should see your user has logged and their user type is ***Federated***
 ![Image](images/firefox-saml-tracer.png)
 
 * For additonal troubleshooting steps, please refer to the Troubleshooting section of the Aruba Central documentation: [Troubleshooting SAML SSO Authentication Issues](https://help.central.arubanetworks.com/2.5.3/documentation/online_help/content/nms/user-mgmt/trblsht-saml.htm). 
+
+## Contributing
+
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change. 
+Please feel free to post a message in the issues on any errors or corrections necessary for this documentation.
 
 
 
