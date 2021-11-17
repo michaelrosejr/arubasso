@@ -17,9 +17,10 @@ $body-link-color: #FF791C !default;
 $blockquote-text-color: #819198 !default;
 
 @import "{{ site.theme }}";
-
 .project-tagline {
   margin-bottom: 2rem;
+  font-weight: normal;
+  opacity: unset;
 
   @include large {
     font-size: 1.25rem;
