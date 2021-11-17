@@ -23,6 +23,10 @@ $blockquote-text-color: #819198 !default;
   background-color: $header-bg-color;
   background-image: unset;
 
+  @include large {
+    padding: 0rem 0rem;
+  }
+  
   @include medium {
     padding: 3rem 4rem;
   }
