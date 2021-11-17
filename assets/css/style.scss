@@ -1,6 +1,25 @@
 ---
 ---
 
+.project-tagline {
+  margin-bottom: 2rem;
+  font-weight: normal;
+  color: #FFFFFF;
+  opacity: 0.7;
+
+  @include large {
+    font-size: 1.25rem;
+  }
+
+  @include medium {
+    font-size: 1.15rem;
+  }
+
+  @include small {
+    font-size: 1rem;
+  }
+}
+
 // Breakpoints
 $large-breakpoint: 64em !default;
 $medium-breakpoint: 42em !default;
