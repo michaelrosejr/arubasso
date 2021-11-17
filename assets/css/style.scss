@@ -1,22 +1,6 @@
 ---
 ---
 
-.project-tagline {
-  margin-bottom: 2rem;
-
-  @include large {
-    font-size: 1.25rem;
-  }
-
-  @include medium {
-    font-size: 1.15rem;
-  }
-
-  @include small {
-    font-size: 1rem;
-  }
-}
-
 // Breakpoints
 $large-breakpoint: 64em !default;
 $medium-breakpoint: 42em !default;
@@ -33,3 +17,19 @@ $body-link-color: #FF791C !default;
 $blockquote-text-color: #819198 !default;
 
 @import "{{ site.theme }}";
+
+.project-tagline {
+  margin-bottom: 2rem;
+
+  @include large {
+    font-size: 1.25rem;
+  }
+
+  @include medium {
+    font-size: 1.15rem;
+  }
+
+  @include small {
+    font-size: 1rem;
+  }
+}
