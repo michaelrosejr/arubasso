@@ -1,10 +1,10 @@
 ---
 ---
 
-@import "{{ site.theme }}";
-
 // Text
 $section-headings-color: #232226;
 $body-text-color: #524F57 !default;
 $body-link-color: #FF791C !default;
 $blockquote-text-color: #819198 !default;
+
+@import "{{ site.theme }}";
