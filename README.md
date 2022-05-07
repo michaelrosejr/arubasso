@@ -46,6 +46,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 <li>Create recovery account</li>
 </ol>
 
+<br/>
 
 
 ## Step 1: Create an Azure AD Enterprise Application
@@ -144,7 +145,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 
 <img src="images/ccs-saml-config-settings-summary.png" alt="saml-settings" height="70%" width="70%">
 
-* Create teh recovery user per the instructions
+* Create the recovery user per the instructions
 * Validate the settings are correct
 * Save and Finish the configruation.
 * If you get an error that the SAML configuraiton wasn't completed using the account with the @domain.com. You'll have to log back up and login with the SAML domain and go through the above configuration again.
