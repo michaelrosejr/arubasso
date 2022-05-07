@@ -5,6 +5,7 @@ Single sign-on (SSO) enables users to securely authenticate with multiple applic
 
 This is the general process for configuring Azure AD to authenticate users into Greenlake Cloud Platform (GLCP) and Aruba Central using SAML IDP.
 
+The Okta version of this guide can be found on [WIFI-GUYS](https://www.wifi-guys.com/?p=512)
 <!-- prettier-ignore-start -->
 ## Contents
 
