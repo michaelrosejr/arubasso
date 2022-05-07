@@ -29,7 +29,9 @@ This document references the following documentation:
 
 * [HPE Greenlake Platform Guide](https://support.hpe.com/hpesc/public/docDisplay?docLocale=en_US&docId=a00120892en_us)
 
-If you're looking for the Central 2.5.4 SAML integration guide, it has been moved.
+**If you're looking for the Central 2.5.4 SAML integration guide, [it has been moved](https://github.com/michaelrosejr/arubasso/tree/main/Central254).**
+
+
 ## Steps to Configure SSO/SAML Application in Azure AD
 To configure SSO in Aruba Central, first download the metadata file from Azure AD.
 
