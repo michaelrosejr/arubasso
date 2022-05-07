@@ -1,4 +1,4 @@
-# Greenlake Cloud Platform (GLCP): Configuring Azure AD as the SAML IDP with Aruba Central
+# Configuring Azure AD as the SAML IDP with Greenlake Cloud Platform and Aruba Central
 
 
 Single sign-on (SSO) enables users to securely authenticate with multiple applications and websites by logging in only once—with just one set of credentials (username and password). With SSO, the application or website that the user is trying to access relies on a trusted third party (Identity provider) to verify that users are who they say they are.
@@ -9,9 +9,10 @@ The Okta version of this guide can be found on [WIFI-GUYS](https://www.wifi-guys
 <!-- prettier-ignore-start -->
 ## Contents
 
-- [Greenlake Cloud Platform (GLCP): Configuring Azure AD as the SAML IDP with Aruba Central](#greenlake-cloud-platform-glcp-configuring-azure-ad-as-the-saml-idp-with-aruba-central)
+- [Configuring Azure AD as the SAML IDP with Greenlake Cloud Platform and Aruba Central](#configuring-azure-ad-as-the-saml-idp-with-greenlake-cloud-platform-and-aruba-central)
 	- [Contents](#contents)
 	- [Before you Begin](#before-you-begin)
+	- [Terms used in this document](#terms-used-in-this-document)
 	- [Steps to Configure SSO/SAML Application in Azure AD](#steps-to-configure-ssosaml-application-in-azure-ad)
 	- [Step 1: Create an Azure AD Enterprise Application](#step-1-create-an-azure-ad-enterprise-application)
 	- [Step 2: Configure GCLP for SAML Federation](#step-2-configure-gclp-for-saml-federation)
@@ -32,6 +33,17 @@ This document references the following documentation:
 
 **If you're looking for the Central 2.5.4 SAML integration guide, [it has been moved](https://github.com/michaelrosejr/arubasso/tree/main/Central254).**
 
+## Terms used in this document
+
+- `CCS:` Common Cloud Service
+- `GLPC:` GreenLake Cloud Platform
+- `SSO:` Single Sign On
+- `SAML:` Security Assertion Markup Language
+- `AD:` Active Directory 
+- `MFA:` Multi-Factor Authentication
+- `MSP:` Managed Service Proivder
+- `XML:` eXtensible Markup Language
+
 
 ## Steps to Configure SSO/SAML Application in Azure AD
 To configure SSO in Aruba Central, first download the metadata file from Azure AD.
@@ -45,7 +57,6 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 	<li>Upload the federated metadata XML file to GLCP </li>
 	<li>Create recovery account</li></ol>
 
-<br/>
 
 
 ## Step 1: Create an Azure AD Enterprise Application
@@ -70,7 +81,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 * Under Step 1: Assign users and groups, select the AD Group you created at the beginning of this document.
 
 
-![Image](images/AssignUsersGroups.png)
+	![Image](images/AssignUsersGroups.png)
 
 * Under Step 2: Set Up Signle sign on
   
@@ -78,7 +89,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 * The default setting is Disabled. Select **SAML** 
   
 
-![Image](images/select-saml.png)
+	![Image](images/select-saml.png)
 
 
 * Under Basic SAML Configuration, click **Edit**
