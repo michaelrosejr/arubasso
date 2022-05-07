@@ -46,6 +46,8 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 <li>Create recovery account</li>
 </ol>
 
+
+
 ## Step 1: Create an Azure AD Enterprise Application
 
 
@@ -60,12 +62,25 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
   
   Enter the name of your app. (Ex: Aruba Central USWEST 4)
 ![Image](images/create_app.png)
+
+
 * Select **Integrate any other application you don't find in the gallery (Non-gallery)**
+
+
 * Under Step 1: Assign users and groups, select the AD Group you created at the beginning of this document.
+
+
 ![Image](images/AssignUsersGroups.png)
+
 * Under Step 2: Set Up Signle sign on
+  
+
 * The default setting is Disabled. Select **SAML** 
+  
+
 ![Image](images/select-saml.png)
+
+
 * Under Basic SAML Configuration, click **Edit**
 
 
@@ -99,6 +114,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 
 
 ![Image](images/azure-saml-hpe_ccs_attribute.png)
+
 <img src="images/azure-saml-hpe_ccs_attribute.png" alt="azure-saml-hpe_ccs_attribute" height="50%" width="50%">
 
 
@@ -107,6 +123,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 <img src="images/azure-saml-federation-metadata-download.png" alt="azure-saml-federation-metadata-download" height="50%" width="50%">
 
 ## Step 2: Configure GCLP for SAML Federation
+
 * Login to GLCP and select Manage
 
 <img src="images/manage.png" alt="manage" height="50%" width="50%">
@@ -133,10 +150,10 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 * If you get an error that the SAML configuraiton wasn't completed using the account with the @domain.com. You'll have to log back up and login with the SAML domain and go through the above configuration again.
 
 ## Login to GLCP and Aruba Central using Azure AD
+
 * Once you've completed the above steps, login to central using your Azure AD email.
 
 <img src="images/ccs_login.png" alt="ccs_login" height="40%" width="40%"><img src="images/ccs_login_saml.png" alt="ccs_login_saml" height="40%" width="40%">
-![Image](images/azure-sso-login.png)
 
 * If everything is working correctly, you should have logged into GLCP and Aruba Central is an option to Launch.
 
@@ -161,7 +178,9 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 
 The `hpe_ccs_attribute` is used to determine your GLCP account.  The format for the `hpe_ccs_attribute` is as follows:
 
+
 <img src="images/hpe_ccs_attribute-img1.png" alt="hpe_ccs_attribute-img1" height="75%" width="75%">
+
 
 An Example `hpe_ccs_attribute` for a single GLCP and Aruba Central account would be:
 
@@ -171,15 +190,18 @@ version_1#2fd5f97acbc211ecadc006baf610dd36:00000000-0000-0000-0000-000000000000:
 
 or
 
+
 ```
 version_1#5b0ec0e8b4f411eca432ba72799953ac:00000000-0000-0000-0000-000000000000:Account Administrator:ALL_SCOPES:683da368-66cb-4ee7-90a9-ec1964768092:Aruba Central Administrator:ALL_SCOPES#090480bc9d0c11ecb23dda25c6ddbc41:00000000-0000-0000-0000-000000000000:Account Administrator:ALL_SCOPES
 ```
+
 
 If you're a Managed Service Provider (MSP), then the `hpe_ccs_attribute` for Administrator rights to GLCP and Aruba Central for all customer tenant accounts:
 
 ```
 version_1#d951f8c8c67711eca2cf9efb55836a4d:00000000-0000-0000-0000-000000000000:Account Administrator|TENANT|:ALL_SCOPES:00000000-0000-0000-0000-000000000000:Account Administrator|MSP|:ALL_SCOPES:683da368-66cb-4ee7-90a9-ec1964768092:Aruba Central Administrator|TENANT| : ALL_SCOPES:683da368-66cb-4ee7-90a9-ec1964768092:Aruba Central Administrator|MSP| : ALL_SCOPES
 ```
+
 
 The `hpe_ccs_attribute` string for a tenant under a MSP account, would be below. However, you **must** have the SAML domain configuration configured for that tenant account using the **same** setting as the MSP account. To say it another way, you **must** go through this configuration for each tenant account under the MSP.
 
