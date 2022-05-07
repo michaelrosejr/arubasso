@@ -43,8 +43,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 	<li>Download the federated metadata XML file from Enterprise Application</li>
 	<li>Claim and Configure your domain within GLCP</li>
 	<li>Upload the federated metadata XML file to GLCP </li>
-	<li>Create recovery account</li>
-</ol>
+	<li>Create recovery account</li></ol>
 
 <br/>
 
