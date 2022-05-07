@@ -120,6 +120,7 @@ To configure SSO in Aruba Central, first download the metadata file from Azure A
 	and App ID (683da368-66cb-4ee7-90a9-ec1964768092) for your Central cluster
 	
 	```
+**For more details on the `hpe_ccs_attritube`, see the Appendix: [Generating the `hpe_ccs_attribute`](#appendix-generating-the-hpe_ccs_attribute)**
 
 <img src="images/azure-saml-custom-attributes-img1.png" alt="azure-saml-custom-attributes-img1" height="50%" width="50%">
 
