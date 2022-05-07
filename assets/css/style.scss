@@ -1,0 +1,92 @@
+---
+---
+
+// Breakpoints
+$large-breakpoint: 64em !default;
+$medium-breakpoint: 42em !default;
+
+// Headers
+$header-heading-color: #BBBBBB !default;
+$header-bg-color: #2D2D2D;
+$header-bg-color-secondary: unset;
+
+// Text
+$section-headings-color: #232226;
+$body-text-color: #524F57 !default;
+$body-link-color: #FF791C !default;
+$blockquote-text-color: #819198 !default;
+
+@import "{{ site.theme }}";
+.project-name {
+  margin-top: 0;
+  margin-bottom: 0.1rem;
+
+  @include large {
+    font-size: 2.25rem;
+    color: #FF791C;
+  }
+
+  @include medium {
+    font-size: 2.25rem;
+  }
+
+  @include small {
+    font-size: 1.75rem;
+  }
+}
+.page-header {
+  color: $header-heading-color;
+  text-align: center;
+  background-color: $header-bg-color;
+  background-image: unset;
+
+  @include large {
+    padding: 0rem 0rem;
+  }
+  
+  @include medium {
+    padding: 3rem 4rem;
+  }
+
+  @include small {
+    padding: 2rem 1rem;
+  }
+}
+.project-tagline {
+  margin-bottom: 2rem;
+  font-weight: normal;
+  opacity: unset;
+
+  @include large {
+    font-size: 1.25rem;
+  }
+
+  @include medium {
+    font-size: 1.15rem;
+  }
+
+  @include small {
+    font-size: 1rem;
+  }
+}
+.btn {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #FF791C;
+  background-color: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.3rem;
+  transition: color 0.2s, background-color 0.2s, border-color 0.2s;
+
+  &:hover {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+  }
+}
+ * {
+  box-sizing: unset;
+}
